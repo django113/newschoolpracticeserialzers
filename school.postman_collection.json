@@ -1,0 +1,340 @@
+{
+	"info": {
+		"_postman_id": "a6794d92-0e5f-4328-a95d-fe9396b4883b",
+		"name": "school",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23754490"
+	},
+	"item": [
+		{
+			"name": "accounts",
+			"item": [
+				{
+					"name": "client",
+					"item": [
+						{
+							"name": "user login",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"mahesh@gmail.com\",\n    \"password\":\"123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}{{accountClient}}user-login/",
+									"host": [
+										"{{baseurl}}{{accountClient}}user-login"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "new user create",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"phone\":\"56525665\",\n    \"email\":\"vishnu@gmail.com\",\n    \"dob\":\"1993-1-9\",\n    \"password\":\"123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}{{accountsClient}}user-create/",
+									"host": [
+										"{{baseurl}}{{accountsClient}}user-create"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "student",
+			"item": [
+				{
+					"name": "client",
+					"item": [
+						{
+							"name": "get all students",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{baseurl}}{{studentClient}}student-create/",
+									"host": [
+										"{{baseurl}}{{studentClient}}student-create"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "student update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"address\":\"guntoo1r\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}{{studentClient}}student-details/slug5975y66c/",
+									"host": [
+										"{{baseurl}}{{studentClient}}student-details"
+									],
+									"path": [
+										"slug5975y66c",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "subject create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"subject\":\"science1\",\n    \"teaches_by\":1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}{{studentClient}}subject-create/",
+									"host": [
+										"{{baseurl}}{{studentClient}}subject-create"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "marks get all students",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}{{studentClient}}marks-details/",
+									"host": [
+										"{{baseurl}}{{studentClient}}marks-details"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "admin",
+					"item": [
+						{
+							"name": "marks get all",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}{{studentAdmin}}marks-create/",
+									"host": [
+										"{{baseurl}}{{studentAdmin}}marks-create"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "subjects get all",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}{{studentAdmin}}subject-create/",
+									"host": [
+										"{{baseurl}}{{studentAdmin}}subject-create"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "subjects create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"subject\":\"telugu\",\n    \"marks\":30\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}{{studentAdmin}}subject-create/",
+									"host": [
+										"{{baseurl}}{{studentAdmin}}subject-create"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "123",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "vishnu@gmail.com",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		},
+		{
+			"key": "accountsClient",
+			"value": "/accounts/api/client/v1/",
+			"type": "string"
+		},
+		{
+			"key": "studentClient",
+			"value": "/students/api/client/v1/",
+			"type": "string"
+		},
+		{
+			"key": "studentAdmin",
+			"value": "/students/api/admin/v1/",
+			"type": "string"
+		}
+	]
+}
